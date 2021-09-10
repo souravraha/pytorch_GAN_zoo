@@ -74,7 +74,9 @@ def pil_loader(path):
     imgExt = os.path.splitext(path)[1]
     if imgExt == ".npy":
         img = np.load(path)#[0]
-        return np.swapaxes(np.swapaxes(img, 0, 2), 0, 1)
+        img = (img - 5)/961.0
+        return (img * 255).astype(np.uint8)
+        # return np.swapaxes(np.swapaxes(img[np.newaxis], 0, 2), 0, 1)
 
     # open path as file to avoid ResourceWarning
     # (https://github.com/python-pillow/Pillow/issues/835)

@@ -417,7 +417,7 @@ class GANTrainer():
         print("size", size)
         transformList = [NumpyResize(size),
                          NumpyToTensor(),
-                         Transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))]
+                         Transforms.Normalize((0.5,), (0.5,))]
 
         if self.modelConfig.dimOutput == 1:
             transformList = [Transforms.Grayscale(1)] + transformList
