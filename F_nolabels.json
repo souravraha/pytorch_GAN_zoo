@@ -1,0 +1,1 @@
+{"pathDB": "train/", "config": {"dimOutput": 1, "weightConditionG": 1, "weightConditionD": 1}, "imagefolderDataset": true}

@@ -184,7 +184,7 @@ class AttribDataset(Dataset):
         listDir = [dirName for dirName in os.listdir(pathdb)
                    if os.path.isdir(os.path.join(pathdb, dirName))]
 
-        imgExt = [".jpg", ".png", ".JPEG"]
+        imgExt = [".jpg", ".png", ".npy", ".JPEG"]
 
         self.attribDict = {}
 

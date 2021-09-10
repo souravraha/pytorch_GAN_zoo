@@ -73,7 +73,7 @@ class NumpyToTensor(object):
 def pil_loader(path):
     imgExt = os.path.splitext(path)[1]
     if imgExt == ".npy":
-        img = np.load(path)[0]
+        img = np.load(path)#[0]
         return np.swapaxes(np.swapaxes(img, 0, 2), 0, 1)
 
     # open path as file to avoid ResourceWarning

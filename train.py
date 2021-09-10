@@ -119,7 +119,7 @@ if __name__ == "__main__":
                             trainingConfig.get("partitionValue", None))
 
     GANTrainer = trainerModule(pathDB,
-                            #    useGPU=True,
+                               useGPU=True,
                                visualisation=vis_module,
                                lossIterEvaluation=kwargs["evalIter"],
                                checkPointDir=checkPointDir,
