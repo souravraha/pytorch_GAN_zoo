@@ -75,7 +75,8 @@ def pil_loader(path):
     if imgExt == ".npy":
         img = np.load(path)#[0]
         img = (img - 5)/961.0
-        return (img * 255).astype(np.uint8)
+        img = Image.fromarray((img * 255).astype(np.uint8))
+        return img.convert('RGB')
         # return np.swapaxes(np.swapaxes(img[np.newaxis], 0, 2), 0, 1)
 
     # open path as file to avoid ResourceWarning
