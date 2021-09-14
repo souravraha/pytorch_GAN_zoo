@@ -1,1 +1,17 @@
-{"pathDB": "/content/images", "config": {"dimLatentVector": 100, "baseLearningRate": 0.0001, "dimOutput": 1}, "imagefolderDataset": true}
+{
+    "pathDB": "/content/images/train/",
+    "config": {
+        "dimOutput": 1,
+        "weightConditionG": 1,
+        "weightConditionD": 1,
+        "maxIterAtScale": [
+            15000,
+            25000,
+            25000,
+            25000,
+            25000,
+            25000
+        ]
+    },
+    "imagefolderDataset": true
+}

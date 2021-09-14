@@ -21,7 +21,7 @@ def resizeTensor(data, out_size_image):
     if out_size_image[0] < data.size()[0] and out_size_image[1] < data.size()[1]:
         interpolationMode = 2
 
-    transform = Transforms.Compose([Transforms.Normalize((-1., -1., -1.), (2, 2, 2)),
+    transform = Transforms.Compose([Transforms.Normalize((-1.,), (2,)),
                                     Transforms.ToPILImage(),
                                     Transforms.Resize(
                                         out_size_image, interpolation=interpolationMode),
